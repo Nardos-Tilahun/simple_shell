@@ -30,7 +30,7 @@ You are not allowed to use strtok
 
 handle arguments for the built-in exit
 Usage: exit status, where status is an integer used to exit the shell
-9. setenv, unsetenv 
+9. setenv, unsetenv
 Simple shell 1.0 +
 
 Implement the setenv and unsetenv builtin commands
