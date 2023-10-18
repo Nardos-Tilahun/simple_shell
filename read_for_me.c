@@ -10,20 +10,20 @@ char *read_for_me()
 	size_t bufr_count = 0;
 	ssize_t count_me = 0;
 
-	if (isatty(STDIN_FILENO) == 1)
-		write(STDOUT_FILENO, "#cisfun$ ", 9);
+	if (isatty(0))
+		write(STDIN_FILENO, "#cisfun$ ", 9);
 	count_me = getline(&read_me, &bufr_count, stdin);
 	if (!read_me || count_me == -1)
 	{
 		if (read_me)
 			free(read_me);
-		if (isatty(STDIN_FILENO) == 1)
+		if (isatty(0))
 		{
-			write(STDOUT_FILENO, "\n", 1);
+			write(STDIN_FILENO, "\n", 1);
 		}
 		else
 		{
-			write(STDOUT_FILENO, "#cisfun$ ", 9);
+			write(STDIN_FILENO, "#cisfun$ ", 9);
 		}
 		return (NULL);
 	}
