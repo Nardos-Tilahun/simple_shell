@@ -29,8 +29,8 @@ int main(int count, char *arg_str[], char *our_env[])
 			i = 0;
 			while (our_env[i] != NULL)
 			{
-				write(1, our_env[i], lenstr(our_env[i]));
-				write(1, "\n", 1);
+				write(STDIN_FILENO, our_env[i], lenstr(our_env[i]));
+				write(STDIN_FILENO, "\n", 1);
 				i++;
 			}
 			for (i = 0; ch[i]; i++)
