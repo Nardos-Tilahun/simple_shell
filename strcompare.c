@@ -1,27 +1,24 @@
 #include "our_shell.h"
 
 /**
- * strcompare- entry point of the program
- * @first: - count the number of argument
- * @second: - array of a string in the command
- * @move: - pointer to int
- * Return: integer whether it is success or not
+ * strcompare- it compare the path to second string
+ * @first: - first string which is the path
+ * @second: - second string that we want to find from first
+ * Return: new character array that exclude the second string
  */
-char *strcompare(char *first, char *second, int *move)
+char *strcompare(char *first, char *second)
 {
-	*move = 0;
+	int i = 0;
 
 	if (!(first && second))
-	{
 		return (NULL);
-	}
-	while (first[*move] != '\0')
+	while (first[i] != '\0')
 	{
-		if (first[*move] != second[*move])
+		if (first[i] != second[i])
 			break;
-		(*move)++;
+		i++;
 	}
-	if (second[*move] != '\0')
+	if (second[i] != '\0')
 		return (NULL);
-	return (first + *move);
+	return (first + i);
 }

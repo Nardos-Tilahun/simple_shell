@@ -1,10 +1,10 @@
 #include "our_shell.h"
 
 /**
- * newpath - find the file in the directory
- * @all_path: uses a line of string of the command line
- * @comd: the file name we want to find
- * Return: integer to check the file exist or not
+ * newpath - create a new path including a new file
+ * @all_path: the path only to the directory
+ * @comd: the command file name to concatinate with
+ * Return: character array of new path returned
  */
 char *newpath(char **all_path, char *comd)
 {

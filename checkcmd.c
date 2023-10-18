@@ -4,7 +4,7 @@
  * checkcmd - find the file in the directory
  * @all_path: uses a line of string of the command line
  * @comd: the file name we want to find
- * Return: charcater to check the file exist or not
+ * Return: integer to check the file exist or not
  */
 char *checkcmd(char **all_path, char *comd)
 {

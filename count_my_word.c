@@ -5,7 +5,6 @@
  * count_my_word - counting my word in a line
  * @each_line: - uses a line of string for counting a word
  * @dmeter: - delimeter that separate the string to count the words
- *
  * Return: integer which count the word and return it
  */
 int count_my_word(char *each_line, char *dmeter)

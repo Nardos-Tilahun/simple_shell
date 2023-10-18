@@ -1,10 +1,10 @@
 #include "our_shell.h"
 
 /**
- * compath- entry point of the program
- * @first: - count the number of argument
- * @second: - array of a string in the command
- * Return: integer whether it is success or not
+ * compath - to compare two string
+ * @first: - first string
+ * @second: - second string
+ * Return: integer whether it is match or not
  */
 int compath(char *first, char *second)
 {

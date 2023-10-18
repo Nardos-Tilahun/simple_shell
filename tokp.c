@@ -3,7 +3,6 @@
 /**
  * tokp - separate each words from each line of the input
  * @each_line: uses a line of string of the command line
- *
  * Return: charcter pointer to pointer array of string
  */
 char **tokp(char *each_line)

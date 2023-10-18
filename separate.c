@@ -34,6 +34,5 @@ char **separate(char *each_line)
 		each_word = strtok(NULL, dmeter);
 	}
 	all_words[idx] = NULL;
-	free(each_line);
 	return (all_words);
 }

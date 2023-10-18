@@ -1,10 +1,10 @@
 #include "our_shell.h"
 
 /**
- * concat - reads each line using getline function
- * @str1: string one
- * @str2: string two
- * Return: charcter pointer which point to the first word
+ * concat - concatinate the two string
+ * @str1: first string
+ * @str2: second string
+ * Return: charcter pointer which point new concatinate string
  */
 char *concat(char *str1, char *str2)
 {
