@@ -10,7 +10,7 @@
  */
 int count_my_word(char *each_line, char *dmeter)
 {
-	char *each_word, *temp_word;
+	char *each_word =  NULL, *temp_word = NULL;
 	int word_count, idx, length;
 
 	if (!each_line)
