@@ -11,7 +11,7 @@ char *read_for_me()
 	ssize_t count_me = 0;
 
 	if (isatty(0))
-		write(1, "#cisfun$ ", 9);
+		write(STDIN_FILENO, "#cisfun$ ", 9);
 	count_me = getline(&read_me, &bufr_count, stdin);
 	if (!read_me || count_me == -1)
 	{
@@ -19,11 +19,11 @@ char *read_for_me()
 			free(read_me);
 		if (isatty(0))
 		{
-			write(1, "\n", 1);
+			write(STDIN_FILENO, "\n", 1);
 		}
 		else
 		{
-			write(1, "#cisfun$ ", 9);
+			write(STDIN_FILENO, "#cisfun$ ", 9);
 		}
 		return (NULL);
 	}
