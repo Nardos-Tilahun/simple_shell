@@ -1,7 +1,7 @@
 #include "our_shell.h"
 
 /**
- * copy_me- it copy the string to another string in heap memory
+ * copy_me - it copy the string to another string in heap memory
  * @each_line: uses a line of string that you want to copy
  *
  * Return: charcter pointer to pointer array of string that is copied

@@ -2,12 +2,11 @@
 
 /**
  * evaluate - it evaluate the command it gets
- *
  * @first_arg: the first argument of the vector which has a command on it
  * @vec_arg: all the argument given by the commands
  * @genv: all the global environment
- * @pro: it accept the first argument of the shell command
- * Return: it return integer that has status on it
+ * @pro: check the first argument of the shell
+ * Return: integer value
  */
 int evaluate(char *pro, char *first_arg, char **vec_arg, char **genv)
 {
@@ -23,6 +22,7 @@ int evaluate(char *pro, char *first_arg, char **vec_arg, char **genv)
 	}
 	else if (son == 0)
 	{
+
 		check = execve(first_arg, vec_arg, genv);
 		if (check == -1)
 		{

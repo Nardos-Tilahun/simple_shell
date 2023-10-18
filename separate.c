@@ -10,7 +10,7 @@ char **separate(char *each_line)
 {
 	char **all_words;
 	char *each_word;
-	char dmeter[] = "\n";
+	char dmeter[] = " \t\n";
 	int count_word, idx;
 
 	count_word = count_my_word(each_line, dmeter);
