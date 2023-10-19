@@ -12,7 +12,7 @@ int evaluate(char *pro, char *first_arg, char *vec_arg[], char *genv[])
 {
 	pid_t son;
 	int check = 0;
-	int idx;
+	/*int idx;*/
 
 	signal(SIGUSR1, myexit_point);
 	son = fork();
@@ -24,13 +24,14 @@ int evaluate(char *pro, char *first_arg, char *vec_arg[], char *genv[])
 	else if (son == 0)
 	{
 		child(pro, first_arg, vec_arg, genv);
+
 	}
 	else
 	{
 		waitpid(son, &check, 0);
-		for (idx = 0; vec_arg[idx] != NULL; idx++)
+		/*for (idx = 0; vec_arg[idx] != NULL; idx++)
 			free(vec_arg[idx]);
-		free(vec_arg);
+		free(vec_arg);*/
 	}
 	return (WEXITSTATUS(check));
 }

@@ -35,4 +35,3 @@ char **tokp(char *each_line)
 	all_words[idx] = NULL;
 	return (all_words);
 }
-

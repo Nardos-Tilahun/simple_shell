@@ -11,7 +11,7 @@ char **separate(char *each_line)
 	char **all_words;
 	char *each_word;
 	char dmeter[] = " \t\n";
-	int count_word, idx;
+	int count_word, idx, i;
 
 	count_word = count_my_word(each_line, dmeter);
 	if (count_word == 0)
@@ -22,7 +22,7 @@ char **separate(char *each_line)
 		free(each_line);
 		return (NULL);
 	}
-	each_word = strtok(each_line, dmeter);
+	each_word = strtokk(each_line, dmeter);
 	if (each_word == NULL)
 	{
 		free(each_line);
@@ -31,8 +31,16 @@ char **separate(char *each_line)
 	for (idx = 0; each_word != NULL; idx++)
 	{
 		all_words[idx] = copy_me(each_word);
-		each_word = strtok(NULL, dmeter);
+		each_word = strtokk(NULL, dmeter);
 	}
 	all_words[idx] = NULL;
+	if (idx != count_word)
+	{
+		for (i = 0; i < count_word; i++) {
+			free(all_words[i]);
+		}
+		free(all_words);
+	}
+	free(each_line);
 	return (all_words);
 }

@@ -26,7 +26,7 @@ int count_my_word(char *each_line, char *dmeter)
 	for (idx = 0; idx < length ; idx++)
 		each_word[idx] = each_line[idx];
 	each_word[idx] = '\0';
-	temp_word = strtok(each_word, dmeter);
+	temp_word = strtokk(each_word, dmeter);
 	if (temp_word == NULL)
 	{
 		free(each_line);
@@ -34,7 +34,7 @@ int count_my_word(char *each_line, char *dmeter)
 		return (0);
 	}
 	for (word_count = 0; temp_word != NULL; word_count++)
-		temp_word = strtok(NULL, dmeter);
+		temp_word = strtokk(NULL, dmeter);
 	free(each_word);
 	return (word_count);
 }
