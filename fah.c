@@ -1,9 +1,9 @@
 #include "our_shell.h"
 
 /**
- * hit_file - Reads commands from the argument File
- * @file: File containing commands
- * @argv: Arguments passed
+ * hit_file - locate the file
+ * @file: a file
+ * @argv: passed
  * Return: -1 or 0
  */
 
