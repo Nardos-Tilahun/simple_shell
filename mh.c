@@ -2,108 +2,108 @@
 #include "our_shell.h"
 /**
  *relloc - allocate memory again
- *@point: void which allocate
- *@size_o: original size
- *@size_n: new size
- *Return: vpod pointer
+ *@p: void which allocate
+ *@si: original size
+ *@siz: the new size argument
+ *Return: viod pointer
  */
-void *relloc(void *point, unsigned int size_o, unsigned int size_n)
+void *relloc(void *p, unsigned int si, unsigned int siz)
 {
-	void *ptr;
+	void *tr;
 
-	if (size_n == size_o)
-		return (point);
-	if (!size_n && point)
+	if (siz == si)
+		return (p);
+	if (!siz && p)
 	{
-		free(point);
+		free(p);
 		return (NULL);
 	}
-	ptr = malloc(size_n);
-	if (ptr == NULL)
+	tr = malloc(siz);
+	if (tr == NULL)
 	{
-		free(ptr);
+		free(tr);
 		return (NULL);
 	}
-	if (!point)
+	if (!p)
 	{
-		fillarr(ptr, '\0', size_n);
-		free(point);
+		fillarr(tr, '\0', siz);
+		free(p);
 	}
 	else
 	{
-		mycpymem(ptr, point, size_o);
-		free(point);
+		mycpymem(tr, p, si);
+		free(p);
 	}
-	return (ptr);
+	return (tr);
 }
 /**
- * arrfree - free memory allocated
- * @cmd: array pointer
- * @line: char pointer
+ * arrfree - function that allocated free memory
+ * @cm: pointer array argument
+ * @c_line: argument char pointer
  * Return: Void
  */
-void arrfree(char **cmd, char *line)
+void arrfree(char **cm, char *c_line)
 {
-	free(cmd);
-	free(line);
-	cmd = NULL;
-	line = NULL;
+	free(cm);
+	free(c_line);
+	cm = NULL;
+	c_line = NULL;
 }
 /**
- * mycpymem - copy bytes of memory from source to destination
- *@dest: destination pointer
- *@src: source pointer
- *@n: size to be copied
+ * mycpymem - from source to destination copy memory bytes
+ *@es: final destination pointer
+ *@rc: origin pointer
+ *@nu: size to be copied
  *Return: pointer to destination
  */
-char *mycpymem(char *dest, char *src, unsigned int n)
+char *mycpymem(char *es, char *rc, unsigned int nu)
 {
-	unsigned int i;
+	unsigned int a;
 
-	for (i = 0; i < n; i++)
+	for (a = 0; a < nu; a++)
 	{
-		dest[i] = src[i];
+		es[a] = rc[a];
 	}
-	return (dest);
+	return (es);
 }
 /**
- * fillarr - fill an array by constant byte
- *@a: void pointer
- *@el: int
- *@len: length for int
+ * fillarr - using by constant byte fill array
+ *@at: argument pointer void
+ *@lem: argument integer
+ *@width: length for int
  *Return: void pointer
  */
-void *fillarr(void *a, int el, unsigned int len)
+void *fillarr(void *at, int lem, unsigned int width)
 {
-	char *p = a;
-	unsigned int i = 0;
+	char *pl = at;
+	unsigned int b = 0;
 
-	while (i < len)
+	while (b < width)
 	{
-		*p = el;
-		p++;
-		i++;
+		*pl = lem;
+		pl++;
+		b++;
 	}
-	return (a);
+	return (at);
 }
 /**
- * mycal_oc - allocates memory for an array using malloc
- *@size: size
+ * mycal_oc - for an array using malloc allocate memory
+ *@ize: agument size 
  *Return: void pointer
  */
-void *mycal_oc(unsigned int size)
+void *mycal_oc(unsigned int ize)
 {
-	char *a;
-	unsigned int i;
+	char *j;
+	unsigned int b;
 
-	if (size == 0)
+	if (ize == 0)
 	return (NULL);
-	a = malloc(size);
-	if (a == NULL)
+	j = malloc(ize);
+	if (j == NULL)
 	return (NULL);
-	for (i = 0; i < size; i++)
+	for (b = 0; b < ize; b++)
 	{
-		a[i] = '\0';
+		j[b] = '\0';
 	}
-	return (a);
+	return (j);
 }
