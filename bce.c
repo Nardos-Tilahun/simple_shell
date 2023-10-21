@@ -1,7 +1,7 @@
 #include "our_shell.h"
 /**
  * change_dir - Changes directory
- * @commd: Parsed command
+ * @commd: Parsed the command
  * @stat: how the stat
  * Return: success checking
  */

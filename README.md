@@ -1,3 +1,5 @@
+SIMPLE SHELL PROJECT
+
 This is a simple shell project it include the following function on it 0. Betty would be proud - Write a beautiful code that passes the Betty checks
 
 Simple shell 0.1 - 1. Simple shell 0.1

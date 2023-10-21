@@ -2,7 +2,7 @@
 
 /**
  * statbuilt - Checks if parsed command in built-in
- * @cmd: Parsed command to be check
+ * @cmd: change command to be check
  * Return: 0 Succes -1 Fail
  */
 

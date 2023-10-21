@@ -1,6 +1,6 @@
 #include "our_shell.h"
 /**
- * joy - Displays all possible builtin shellby commands
+ * joy - it write the shell commands
  */
 void joy(void)
 {
@@ -22,7 +22,7 @@ void joy(void)
 }
 
 /**
- * alhi - Displays information on the shell by builtin command 'alias'
+ * alhi - write shell command
  */
 void alhi(void)
 {
@@ -44,7 +44,7 @@ void alhi(void)
 }
 
 /**
- * cdh - Displays information on the shell by builtin command 'cd'
+ * cdh - write shell command
  */
 void cdh(void)
 {
@@ -64,7 +64,7 @@ void cdh(void)
 }
 
 /**
- * exh - Displays information on the shell by builtin command 'exit'
+ * exh - write shell command
  */
 void exh(void)
 {
@@ -80,7 +80,7 @@ void exh(void)
 }
 
 /**
- * helper - Displays information on the shell by builtin command 'help'
+ * helper - write shell command
  */
 void helper(void)
 {
