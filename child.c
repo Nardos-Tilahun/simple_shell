@@ -16,6 +16,9 @@ void child(char *pro, char *first_arg, char *vec_arg[], char *genv[])
 	if (compath(first_arg, "exit"))
 	{
 		kill(getppid(), SIGUSR1);
+		for (idx = 0; vec_arg[idx] != NULL; idx++)
+			free(vec_arg[idx]);
+		free(vec_arg);
 		exit(0);
 	}
 	check = execve(first_arg, vec_arg, genv);
