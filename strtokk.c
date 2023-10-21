@@ -1,45 +1,63 @@
 #include "our_shell.h"
-
 /**
- * strtokk - string
- * @first: -first
- * @dmeter: demeter
- * Return: - string
+ * is_delim - hanle separetor
+ * @c: checking the character
+ * @str: string of delimiter
+ * Return: integer to succes
  */
-char *strtokk(char *first, char *dmeter)
+unsigned int is_delim(char c, const char *str)
 {
-	int i = 0;
-	int check = 0;
-	static char *move;
-	char *next;
+	unsigned int i;
 
-	if (first != NULL)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		move = first;
+		if (c == str[i])
+			return (1);
 	}
-	else
-		next = move;
+	return (0);
+}
+/**
+ * mytokstr - split the word using delimeter
+ * @str: string
+ * @delim: handle the parameter
+ * Return: pointer
+ */
+char *mytokstr(char *str, const char *delim)
+{
+	static char *tokens;
+	static char *new_token;
+	unsigned int i;
 
-	while (*move)
+	if (str != NULL)
+		new_token = str;
+	tokens = new_token;
+	if (tokens == NULL)
+		return (NULL);
+	for (i = 0; tokens[i] != '\0'; i++)
 	{
-		for (i = 0; dmeter[i] != '\0'; i++)
-		{
-			if (*move == dmeter[i])
-			{
-				*move = '\0';
-				move++;
-				check = 1;
-				break;
-			}
-		}
-		if (check == 1)
+		if (is_delim(tokens[i], delim) == 0)
 			break;
-		move++;
 	}
-	if (first != NULL)
-		return (first);
-	else if (*next != '\0')
-		return (next);
-	move = NULL;
-	return (move);
+	if (new_token[i] == '\0' || new_token[i] == '#')
+	{
+		new_token = NULL;
+		return (NULL);
+	}
+	tokens = new_token + i;
+	new_token = tokens;
+	for (i = 0; new_token[i] != '\0'; i++)
+	{
+		if (is_delim(new_token[i], delim) == 1)
+			break;
+	}
+	if (new_token[i] == '\0')
+		new_token = NULL;
+	else
+	{
+		new_token[i] = '\0';
+		new_token = new_token + i + 1;
+		if (*new_token == '\0')
+			new_token = NULL;
+	}
+	return (tokens);
 }
