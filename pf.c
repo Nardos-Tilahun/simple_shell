@@ -56,7 +56,7 @@ char *made(char *token, char *value)
 	return (cmd);
 }
 /**
- * shomyenv - Gets the value of environment variable by name
+ * shomyenv - the value of environment variable by name
  * @name: Environment variable name
  * Return: The value of the environment variable or NULL if failed
  */

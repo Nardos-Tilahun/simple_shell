@@ -1,7 +1,7 @@
 #include "our_shell.h"
 /**
  * is_delim - hanle separetor
- * @c: checking the character
+ * @c: checking the integer
  * @str: string of delimiter
  * Return: integer to succes
  */

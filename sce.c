@@ -1,12 +1,12 @@
 #include "our_shell.h"
 
 /**
- * input_ch - Excutes commands found in predefined path
- * @comand: Array of parsed command strings
- * @input: Input recieved from user (to be freed)
- * @c:Shell Excution Time Case of Command Not Found
- * @vector: Arguments before program starts(vector[0] == Shell Program Name)
- * Return: 1 Case Command Null -1 Wrong Command 0 Command Excuted
+ * input_ch - predefined path
+ * @comand: strings
+ * @input:  (to be freed)
+ * @c:Shell Found
+ * @vector: argument
+ * Return: zero
  */
 
 int input_ch(char **comand, char *input, int c, char **vector)

@@ -1,6 +1,6 @@
 #include "our_shell.h"
 /**
- * myenvh - Displays information on the shell by builtin command 'env'
+ * myenvh - environ print
  */
 void myenvh(void)
 {
@@ -10,7 +10,7 @@ void myenvh(void)
 }
 
 /**
- * myenvseth - Displays information on the shell by builtin command 'setenv'
+ * myenvseth - environ print
  */
 void myenvseth(void)
 {
@@ -24,7 +24,7 @@ void myenvseth(void)
 }
 
 /**
- * help_unsetenv - Displays information on the shellby builtin command
+ * help_unsetenv - environ print
  * 'unsetenv'
  */
 void help_unsetenv(void)

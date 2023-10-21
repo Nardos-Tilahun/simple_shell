@@ -19,7 +19,7 @@ char *mycpystr(char *dest, char *src)
 }
 /**
  * mycatstr - function that concatenates two strings
- * @dest: first string
+ * @dest:  string
  * @src: second string
  * Return: first string + second string
  */

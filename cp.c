@@ -1,9 +1,9 @@
 #include "our_shell.h"
 
 /**
- * chan_cmd - Parses the command recieved from stdin
- * @input: String gathered from stdin
- * Return: Parsed strings to be used as arguments
+ * chan_cmd - argument from stdin
+ * @input: string change
+ * Return: pointer
  */
 
 char **chan_cmd(char *input)

@@ -14,7 +14,7 @@ void setup_and_initialize(char **vector)
 }
 
 /**
- * execute_commands - Execute the main program logic
+ * execute_commands - run the main program logic
  * @vector: vector array
  * Return: The program's exit status
  */

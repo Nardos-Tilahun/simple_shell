@@ -2,7 +2,7 @@
 /**
  * myhist - write file with user inmyputs
  * @input: user input
- * Return: 0 on success -1 if failed
+ * Return: integer
  */
 int myhist(char *input)
 {

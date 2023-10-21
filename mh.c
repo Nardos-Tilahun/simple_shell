@@ -1,7 +1,7 @@
 #include "our_shell.h"
 #include "our_shell.h"
 /**
- *relloc - allocate the memory again
+ *relloc - allocate memory again
  *@point: void which allocate
  *@size_o: original size
  *@size_n: new size

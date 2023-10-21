@@ -17,7 +17,7 @@ void p_num(unsigned int num)
 
 /**
  * p_num_int - string to number
- * @num: to be printed
+ * @num: to printed
  */
 
 void p_num_int(int num)

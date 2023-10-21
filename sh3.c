@@ -82,7 +82,7 @@ char *myi_to_a(unsigned int n)
 /**
  * rev_arr - function reverse an array
  * @arr: string rev
- * @n: number of character
+ * @n: number of characr
  */
 void rev_arr(char *arr, int n)
 {

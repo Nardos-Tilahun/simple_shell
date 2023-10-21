@@ -83,11 +83,11 @@ void new_envi(char **envi);
 void freenv(char **env);
 
 /**
- * struct _builtin - Defines a struct that conatins built-in commands
- * with their respective implementation functions
+ * struct _builtin - Defines a strus
+ * with their respective implementans
  * @commd: - Built-in command
- * @function: - Pointer to custom functions that have
- * similar functionalities as the built-in commands
+ * @function: - Pointer
+ * similar functionalities as the built
  */
 typedef struct _builtin
 {

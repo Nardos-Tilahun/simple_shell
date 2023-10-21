@@ -67,7 +67,7 @@ int mylenstr(char *mystr)
 /**
  * _atoi - function to convert string to a integer
  * @s: string input
- * Return: converted integer
+ * Return:  integer
  */
 int _atoi(char *s)
 {

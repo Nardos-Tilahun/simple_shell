@@ -1,7 +1,7 @@
 #include "our_shell.h"
 /**
-* catchline - read input from standard input by user
-* Return: the input on a buffer
+* catchline - read input user
+* Return: return buffer
 */
 char *catchline()
 {
@@ -43,9 +43,9 @@ char *catchline()
 	return (buf);
 }
 /**
- * newline - Handles newline character input
- * @string: String to be handled
- * Return: Empty string
+ * newline - enter key handler
+ * @string: string to hold
+ * Return: pointer
  */
 char *newline(char *string)
 {
@@ -54,9 +54,9 @@ char *newline(char *string)
 }
 
 /**
- * handspace - Modifies the input string to remove preceeding whitehandspaces
- * @str: Input to be modifies
- * Return: Returns the modified string
+ * handspace - space tab handler
+ * @str: string for input
+ * Return: pointer
  */
 char *handspace(char *str)
 {

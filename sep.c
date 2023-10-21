@@ -2,7 +2,7 @@
 
 /**
  * splits - Separates command recieved from stdin by ;
- * @in: String gathered from stdin
+ * @in: String from stdin
  * Return: Parsed strings to be used as commands
  */
 
