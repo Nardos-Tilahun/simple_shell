@@ -1,63 +1,63 @@
 #include "our_shell.h"
 /**
  * is_delim - hanle separetor
- * @c: checking the integer
- * @str: string of delimiter
+ * @checking: integer checker
+ * @s:	used as delimiter
  * Return: integer to succes
  */
-unsigned int is_delim(char c, const char *str)
+unsigned int is_delim(char checking, const char *s)
 {
 	unsigned int i;
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (c == str[i])
+		if (checking == s[i])
 			return (1);
 	}
 	return (0);
 }
 /**
- * mytokstr - split the word using delimeter
- * @str: string
- * @delim: handle the parameter
+ * mytokstr - a function split the word using delimeter
+ * @s: argumnet string
+ * @delim: parameter handler
  * Return: pointer
  */
-char *mytokstr(char *str, const char *delim)
+char *mytokstr(char *s, const char *delim)
 {
-	static char *tokens;
+	static char *to;
 	static char *new_token;
-	unsigned int i;
+	unsigned int a;
 
-	if (str != NULL)
-		new_token = str;
-	tokens = new_token;
-	if (tokens == NULL)
+	if (s != NULL)
+		new_token = s;
+	to = new_token;
+	if (to == NULL)
 		return (NULL);
-	for (i = 0; tokens[i] != '\0'; i++)
+	for (a = 0; to[a] != '\0'; a++)
 	{
-		if (is_delim(tokens[i], delim) == 0)
+		if (is_delim(to[a], delim) == 0)
 			break;
 	}
-	if (new_token[i] == '\0' || new_token[i] == '#')
+	if (new_token[a] == '\0' || new_token[a] == '#')
 	{
 		new_token = NULL;
 		return (NULL);
 	}
-	tokens = new_token + i;
-	new_token = tokens;
-	for (i = 0; new_token[i] != '\0'; i++)
+	to = new_token + a;
+	new_token = to;
+	for (a = 0; new_token[a] != '\0'; a++)
 	{
-		if (is_delim(new_token[i], delim) == 1)
+		if (is_delim(new_token[a], delim) == 1)
 			break;
 	}
-	if (new_token[i] == '\0')
+	if (new_token[a] == '\0')
 		new_token = NULL;
 	else
 	{
-		new_token[i] = '\0';
-		new_token = new_token + i + 1;
+		new_token[a] = '\0';
+		new_token = new_token + a + 1;
 		if (*new_token == '\0')
 			new_token = NULL;
 	}
-	return (tokens);
+	return (to);
 }

@@ -88,7 +88,7 @@ void *fillarr(void *at, int lem, unsigned int width)
 }
 /**
  * mycal_oc - for an array using malloc allocate memory
- *@ize: agument size 
+ *@ize: agument size
  *Return: void pointer
  */
 void *mycal_oc(unsigned int ize)
